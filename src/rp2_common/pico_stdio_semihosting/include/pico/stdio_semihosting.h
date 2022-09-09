@@ -15,6 +15,8 @@
  *
  *  Linking this library or calling `pico_enable_stdio_semihosting(TARGET ENABLED)` in the CMake (which
  *  achieves the same thing) will add semihosting to the drivers used for standard output
+ *
+ *  \note Semihosting is quite slow because it works by triggering breakpoints. Each printf (or equivalent) takes on the order of 30-100ms.
  */
 
 // PICO_CONFIG: PICO_STDIO_SEMIHOSTING_DEFAULT_CRLF, Default state of CR/LF translation for semihosting output, type=bool, default=PICO_STDIO_DEFAULT_CRLF, group=pico_stdio_semihosting
